@@ -25,16 +25,16 @@ def make_CClvPack_from_json( json_data ):
         game_field7 = CCMapHintField(" ")
         game_field8 = CCMonsterMovementField(" ")
         
-        game_level.level_number = json_data[lv]["Level"]
-        game_level.time = json_data[lv]["Time limit"]
-        game_level.num_chips = json_data[lv]["Chip number"]
-        game_level.upper_layer = json_data[lv]["Upper layer"]
-        game_level.lower_layer = json_data[lv]["Lower layer"]
+        game_level.level_number = json_data[lv]["level_number"]
+        game_level.time = json_data[lv]["time"]
+        game_level.num_chips = json_data[lv]["number_of_chips"]
+        game_level.upper_layer = json_data[lv]["upper_layer"]
+        game_level.lower_layer = json_data[lv]["lower_layer"]
         
-        game_field3.title = json_data[lv]["Map Title Field (type=3)"]
-        game_field6.password = json_data[lv]["Encoded Password Field (type=6)"]
-        game_field7.hint = json_data[lv]["Map Hint Field (type=7)"]
-        game_field8.monsters = json_data[lv]["Moving Objects Field (type=10)"]
+        game_field3.title = json_data[lv]["title"]
+        game_field6.password = json_data[lv]["password"]
+        game_field7.hint = json_data[lv]["hint"]
+        game_field8.monsters = json_data[lv]["moving_objects"]
         
         game_level.optional_fields.append(game_field3)
         game_level.optional_fields.append(game_field6)
